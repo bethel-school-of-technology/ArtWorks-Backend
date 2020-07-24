@@ -12,7 +12,7 @@ const ArtWorks = require ('./models/artists');
 
 const mongoose = require('mongoose'); 
 mongoose.Promise=global.Promise;
-mongoose.connect('link goes here' , { useNewUrlParser: true });; 
+mongoose.connect('mongodb+srv://dbUser:dbUser@cluster0.yy25u.gcp.mongodb.net/charityWater?retryWrites=true&w=majority' , { useNewUrlParser: true });; 
 
 var db=mongoose.connection; 
 var Schema = mongoose.Schema;
@@ -35,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/gallery', usersRouter);
   
   
 console.log("server listening at port 3000"); 

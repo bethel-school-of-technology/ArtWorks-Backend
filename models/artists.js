@@ -22,6 +22,10 @@ const artistsSchema = new mongoose.Schema({
     Deleted: {
         type: Boolean,
         default: false
+    },
+    Votes: {
+        type: Number,
+        default: 0
     } 
 });
 
