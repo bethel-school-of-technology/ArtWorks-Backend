@@ -1,3 +1,4 @@
+// -------------------- EM ARTIST MODEL --------------------
 const mongoose = require('mongoose');
 
 const artistsSchema = new mongoose.Schema({
@@ -13,15 +14,19 @@ const artistsSchema = new mongoose.Schema({
         type: String
     },
     Photo: {
-        type: String
-    },
-    Admin: {
-        type: Boolean,
-        default: false
+        type: String,
+        required: true
     },
     Deleted: {
         type: Boolean,
         default: false
+    },
+    New: {
+        type: Boolean,
+        default: true
+    },
+    Accepted: {
+        type: Boolean
     },
     Votes: {
         type: Number,
