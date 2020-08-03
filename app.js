@@ -7,6 +7,8 @@ var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const ArtWorks = require ('./models/artists');
+
 
 const mongoose = require('mongoose'); 
 mongoose.Promise=global.Promise;
@@ -33,6 +35,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/gallery', usersRouter);
+
   
   
 console.log("server listening at port 3000"); 

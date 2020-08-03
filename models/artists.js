@@ -1,5 +1,4 @@
 // -------------------- EM ARTIST MODEL --------------------
-
 const mongoose = require('mongoose');
 
 const artistsSchema = new mongoose.Schema({
@@ -34,7 +33,5 @@ const artistsSchema = new mongoose.Schema({
         default: 0
     } 
 });
-
-
 
 module.exports = mongoose.model('ArtWorks', artistsSchema);
