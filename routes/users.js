@@ -28,7 +28,7 @@ router.post('/signup', function (req, res) {
   });
 })
 router.get('/gallery', function (req, res) {
-  artists.find({}).then(artworks => {
+  Artworks.find({ New: false, Accepted: true }).then(artworks => {
     res.json({
       message: "Art Successfully Downloaded",
       status: 200,
